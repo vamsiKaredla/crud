@@ -1,0 +1,14 @@
+empno<input [(ngModel)]='eobj.empno' (blur)='getdet()'  [disabled]="showem"/>
+<br>
+salary<input [(ngModel)]='eobj.sal'  /><br/>
+deptid<input [(ngModel)]='eobj.depid' /><br/>
+<button  (click)='add()' [disabled]="show">add</button>
+<button  (click)='modify()' [disabled]="showup">modify</button>
+<button  (click)='delete()' [disabled]="showup">delete</button>
+<button  (click)='search()' >search</button><br/>
+sort by id<input type="radio" name="sort" (click)='sortbyid()'><br>
+sort by salary<input type="radio" name="sort" (click)='sortbysal()'>
+<button (click)='import()'>import</button>
+<button (click)='export()'>export</button>
+
+<span><pre>{{msg}}</pre></span>
